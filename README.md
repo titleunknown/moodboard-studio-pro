@@ -17,8 +17,8 @@ colour edit already applied.
 
 - **Three-pane workspace** — image tray (left), board canvas (centre), layout
   tools (right).
-- **Two layout modes**
-  - **Fill** — automatically packs every photo across as many pages as needed.
+- **Three layout modes**
+  - **Justified and Gallery** — automatically packs every photo across as many pages as needed.
   - **Freeform** — a blank page you drag photos onto, move, and corner-resize
     (proportional, no distortion). On release each photo snaps to keep even
     spacing from its neighbours; drag past a page edge to move it to the
