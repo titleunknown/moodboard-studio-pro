@@ -1,9 +1,15 @@
-# Mood Board Studio Pro
+<p align="center">
+  <img src="Mood%20Board%20Pro/Mood%20Board%20Pro/Assets.xcassets/AppIcon.appiconset/icon_512x512.png" width="128" alt="Mood Board Studio Pro icon">
+</p>
+
+<h1 align="center">Mood Board Studio Pro</h1>
 
 A native macOS app for laying photos out onto clean, print-ready pages and
 exporting them as a PDF. Built with SwiftUI. Photographers who shoot in
 **Capture One** can pull an album in directly, with every adjustment, crop and
 colour edit already applied.
+
+![Mood Board Studio Pro — three-pane workspace](MBSP_screenshot.jpg)
 
 ---
 
@@ -28,11 +34,42 @@ colour edit already applied.
 
 ## Requirements
 
-- macOS **15.0** or later.
+- macOS **15.0** or later (Apple silicon and Intel).
 - Capture One **16.x** (optional — only for the Capture One integration).
 
-The app ships **non-sandboxed** (Developer-ID path) because the Capture One
-integration drives Capture One over AppleScript automation.
+## Download & install
+
+1. **Download** the latest `.zip` from the
+   [**Releases**](../../releases/latest) page.
+2. **Unzip it** (double-click) and drag **Mood Board Studio Pro.app** into
+   your **Applications** folder.
+3. **Open it.** The app is signed and notarized by Apple, so the first launch
+   just asks you to confirm you downloaded it from the internet — click
+   **Open**.
+
+Your **5-day free trial** starts on first launch — everything is unlocked, no
+key needed. When you're ready, **buy a license at
+[software.fainimade.com](https://software.fainimade.com/)** and paste the key
+into **Settings › License › Activate** (see **Licensing** below).
+
+To update later, use **Settings › About › Check for Updates**, or grab the
+newest release from the same page and replace the app in Applications.
+
+## Permissions macOS will ask for
+
+Everything runs locally on your Mac — the only network use is license
+activation and the update check. Depending on which features you use, macOS
+may show these one-time permission prompts:
+
+- **Automation › Capture One** — the first time you connect to Capture One,
+  macOS asks to let Mood Board Studio Pro control it. This is how the app asks
+  Capture One to render your photos; click **Allow**. Change it later in
+  **System Settings › Privacy & Security › Automation**.
+- **Folder access** — if you watch a folder that lives in Desktop, Documents,
+  or Downloads, macOS asks once before the app may read files there. Change it
+  later in **System Settings › Privacy & Security › Files & Folders**.
+
+Photos you drag in directly never trigger a prompt.
 
 ## Using the app
 
@@ -46,8 +83,6 @@ Press **Delete** / **Backspace** to remove the selected photo (in the tray, a
 slot, or a freeform placement) — unless a text field is focused.
 
 ## How the Capture One integration works
-
-The integration is split into a *control plane* and a *pixel path*:
 
 1. You connect to Capture One and pick a collection (album, favourite, smart
    album…), then click **Start Watching**.
@@ -64,8 +99,7 @@ The first time you use it, macOS asks permission for Mood Board Studio Pro to co
 Capture One — this is expected; allow it (or later, in **System Settings ›
 Privacy & Security › Automation**).
 
-Scripts run out-of-process via `/usr/bin/osascript` so the main thread never
-blocks. The recipe uses Capture One's **JPEG QuickProof** format — a fast proof
+The recipe uses Capture One's **JPEG QuickProof** format — a fast proof
 rendered from the preview, with your adjustments applied. There are no size or
 quality settings to tune: QuickProof trades archival fidelity for speed, which
 is exactly what board layout needs.
@@ -106,10 +140,12 @@ Mood Board Studio Pro is **try-before-you-buy**:
   license is activated. Photos already on a board stay visible; you just can't
   build new boards or export a PDF. A banner above the *Generate* / *Export*
   buttons counts down the trial and links to activation.
-- **Activation** — buy a key (checkout is powered by **Lemon Squeezy**, which
-  generates the keys), then paste it into **Settings › License › Activate**.
-  Each key allows a limited number of machine activations; use **Deactivate on
-  This Mac** to free a seat before moving to another computer.
+- **Activation** — buy a key at
+  [**software.fainimade.com**](https://software.fainimade.com/) (checkout is
+  powered by **Lemon Squeezy**, which generates the keys), then paste it into
+  **Settings › License › Activate**. Each key allows a limited number of
+  machine activations; use **Deactivate on This Mac** to free a seat before
+  moving to another computer.
 - **Offline** — once activated, the license keeps working without an internet
   connection. The app re-checks with the licensing server on launch and only
   ever revokes a license if the server explicitly reports it as refunded,
@@ -119,8 +155,8 @@ Mood Board Studio Pro is **try-before-you-buy**:
 
 A license unlocks **one major version** — a **1.x** key works for every 1.x
 update, forever. When a new **major** version (**2.0**) ships, it requires a new
-license. Each major version is sold as its **own Lemon Squeezy product**, and the
-app only accepts a key bought from the product that matches its major version.
+license — but upgrading is always your choice: your current version never
+stops working.
 
 
 ## Notes
