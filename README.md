@@ -29,21 +29,10 @@ colour edit already applied.
 ## Requirements
 
 - macOS **15.0** or later.
-- Xcode 16 or later to build.
 - Capture One **16.x** (optional — only for the Capture One integration).
 
 The app ships **non-sandboxed** (Developer-ID path) because the Capture One
 integration drives Capture One over AppleScript automation.
-
-## Build & run
-
-Open `Mood Board Pro/Mood Board Pro.xcodeproj` in Xcode and run the
-**Mood Board Pro** scheme, or from the command line:
-
-```sh
-cd "Mood Board Pro"
-xcodebuild -scheme "Mood Board Pro" -configuration Debug build
-```
 
 ## Using the app
 
@@ -133,25 +122,6 @@ update, forever. When a new **major** version (**2.0**) ships, it requires a new
 license. Each major version is sold as its **own Lemon Squeezy product**, and the
 app only accepts a key bought from the product that matches its major version.
 
-### Store setup (for the developer)
-
-The licensing code ships with placeholder identifiers that must be filled in
-before release, in [`LicenseManager.swift`](Mood%20Board%20Pro/Mood%20Board%20Pro/LicenseManager.swift)
-under `LicenseConfig`:
-
-| Constant | What to set it to |
-| --- | --- |
-| `expectedStoreID` | Your Lemon Squeezy **store id**. |
-| `expectedProductID` | The **product id** for the current major version (v1). |
-| `purchaseURL` | The product's checkout / store URL. |
-
-Until the two ids are non-zero, the app skips the store/product identity check so
-the trial-and-activate flow can be tested against any key. Once they're set, only
-keys from that exact store and product activate. **When you release 2.0**: create
-a new Lemon Squeezy product for it and point `expectedProductID` at that product
-in the 2.0 build — existing 1.x keys will then correctly read as "for a different
-version." Activation talks to Lemon Squeezy's public License API
-(`activate` / `validate` / `deactivate`); no API token is embedded in the app.
 
 ## Notes
 
