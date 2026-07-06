@@ -157,6 +157,7 @@ A license unlocks **one major version** — a **1.x** key works for every 1.x
 update, forever. When a new **major** version (**2.0**) ships, it requires a new
 license — but upgrading is always your choice: your current version never
 stops working.
+License works on two macs at once.
 
 
 ## Notes
