@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="icon_512x512.png" width="128" alt="Mood Board Studio Pro icon">
+  <img src="Mood%20Board%20Pro/Mood%20Board%20Pro/Assets.xcassets/AppIcon.appiconset/icon_512x512.png" width="128" alt="Mood Board Studio Pro icon">
 </p>
 
 <h1 align="center">Mood Board Studio Pro</h1>
@@ -18,11 +18,17 @@ colour edit already applied.
 - **Three-pane workspace** — image tray (left), board canvas (centre), layout
   tools (right).
 - **Three layout modes**
-  - **Justified and Gallery** — automatically packs every photo across as many pages as needed.
+  - **Justified** — automatically packs every photo into organic rows across as
+    many pages as needed.
+  - **Gallery** — masonry-style equal-width columns with natural aspect ratios.
   - **Freeform** — a blank page you drag photos onto, move, and corner-resize
     (proportional, no distortion). On release each photo snaps to keep even
     spacing from its neighbours; drag past a page edge to move it to the
-    previous/next page.
+    previous/next page. Right-click a photo for **Scale to Fit Page** — the
+    quick way to a one-image-per-page look.
+- **Page sizes** — US Letter, A4, or 16:9 widescreen, portrait or landscape.
+- **Slideshow** — present the board full screen with **⌥F**; arrow keys move
+  between pages, **Esc** exits.
 - **Capture One integration** — watch an album and ingest full-quality renders
   as you add photos (see below).
 - **PDF export** — every page to a single PDF, with configurable resolution and
@@ -77,7 +83,9 @@ Photos you drag in directly never trigger a prompt.
    JPEG, PNG, HEIC and WebP are supported.
 2. **Choose a layout** — Fill or Freeform, from the tools pane.
 3. **Arrange** — in Freeform, drag to move and corner-drag to resize.
-4. **Export** — *Export PDF* renders every page to one file.
+4. **Present** — **View › Slideshow** (**⌥F**) shows the board full screen;
+   **← →** change pages, **Esc** exits.
+5. **Export** — *Export PDF* renders every page to one file.
 
 Press **Delete** / **Backspace** to remove the selected photo (in the tray, a
 slot, or a freeform placement) — unless a text field is focused.
@@ -119,7 +127,8 @@ currently on a board are always kept.
 
 ## Settings (⌘,)
 
-- **Export** — PDF image resolution and JPEG quality.
+- **Export** — PDF image resolution and JPEG quality, plus an optional
+  high-resolution on-screen preview mode for 4K/5K displays.
 - **Capture One**
   - *Render Format* — fixed at JPEG QuickProof (nothing to configure).
   - *Render Cache* — on-disk size and a one-click clear.
@@ -157,7 +166,6 @@ A license unlocks **one major version** — a **1.x** key works for every 1.x
 update, forever. When a new **major** version (**2.0**) ships, it requires a new
 license — but upgrading is always your choice: your current version never
 stops working.
-License works on two macs at once.
 
 
 ## Notes
