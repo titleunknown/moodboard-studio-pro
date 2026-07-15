@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Mood%20Board%20Pro/Mood%20Board%20Pro/Assets.xcassets/AppIcon.appiconset/icon_512x512.png" width="128" alt="Mood Board Studio Pro icon">
+  <img src="MBSPicon.png" width="128" alt="Mood Board Studio Pro icon">
 </p>
 
 <h1 align="center">Mood Board Studio Pro</h1>
