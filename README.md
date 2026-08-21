@@ -35,6 +35,8 @@ colour edit already applied.
   JPEG quality.
 - **Titles, page numbers, spacing and margins** — all adjustable from the tools
   pane.
+- **Cover and end pages** - The ability to create a cover and end page with custom text
+    logos or images.
 - **5-day free trial**, then a one-time license (sold via Lemon Squeezy) unlocks
   the app for the lifetime of the current major version (see **Licensing**).
 
@@ -80,7 +82,7 @@ Photos you drag in directly never trigger a prompt.
 ## Using the app
 
 1. **Add photos** — drag image files onto the tray, or click it to browse.
-   JPEG, PNG, HEIC and WebP are supported.
+   JPEG, PNG, HEIC and WebP are supported. (sRGB color space)
 2. **Choose a layout** — Fill or Freeform, from the tools pane.
 3. **Arrange** — in Freeform, drag to move and corner-drag to resize.
 4. **Present** — **View › Slideshow** (**⌥F**) shows the board full screen;
