@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="MBSPicon.png" width="128" alt="Mood Board Studio Pro icon">
+  <img src="Mood%20Board%20Pro/Mood%20Board%20Pro/Assets.xcassets/AppIcon.appiconset/icon_512x512.png" width="128" alt="Mood Board Studio Pro icon">
 </p>
 
 <h1 align="center">Mood Board Studio Pro</h1>
@@ -26,6 +26,16 @@ colour edit already applied.
     spacing from its neighbours; drag past a page edge to move it to the
     previous/next page. Right-click a photo for **Scale to Fit Page** — the
     quick way to a one-image-per-page look.
+- **Save and open boards** — **File › Save** (⌘S) keeps the whole board as a
+  `.moodboard` file; reopen it with **File › Open** (⌘O), **Open Recent**, or a
+  double-click in Finder. See **Saved boards** below.
+- **Undo / Redo** — **⌘Z** / **⇧⌘Z** step through moves, resizes, deletions,
+  imports, settings and cover-page edits.
+- **Photos and RAW files** — JPEG, PNG, HEIC, WebP, TIFF, PSD, GIF, AVIF and
+  camera RAW (DNG, CR2/CR3, NEF, ARW, RAF, ORF, RW2, IIQ and more).
+- **Image order** — Random, Filename (A–Z or Z–A) or Date (oldest or newest
+  first). Date is when the photo was taken, read from its EXIF data (falling
+  back to the file's creation date); photos with no date go last.
 - **Page sizes** — US Letter, A4, or 16:9 widescreen, portrait or landscape.
 - **Slideshow** — present the board full screen with **⌥F**; arrow keys move
   between pages, **Esc** exits.
@@ -35,8 +45,6 @@ colour edit already applied.
   JPEG quality.
 - **Titles, page numbers, spacing and margins** — all adjustable from the tools
   pane.
-- **Cover and end pages** - The ability to create a cover and end page with custom text
-    logos or images.
 - **5-day free trial**, then a one-time license (sold via Lemon Squeezy) unlocks
   the app for the lifetime of the current major version (see **Licensing**).
 
@@ -60,13 +68,16 @@ key needed. When you're ready, **buy a license at
 [software.fainimade.com](https://software.fainimade.com/)** and paste the key
 into **Settings › License › Activate** (see **Licensing** below).
 
-To update later, use **Settings › About › Check for Updates**, or grab the
-newest release from the same page and replace the app in Applications.
+The app checks for a new version once a day and lets you know when one is
+available (turn this off under **Settings › About**). You can also check any
+time with **Settings › About › Check for Updates**, or grab the newest release
+from the same page and replace the app in Applications.
 
 ## Permissions macOS will ask for
 
 Everything runs locally on your Mac — the only network use is license
-activation and the update check. Depending on which features you use, macOS
+activation and the once-a-day update check (which you can switch off in
+**Settings › About**). Depending on which features you use, macOS
 may show these one-time permission prompts:
 
 - **Automation › Capture One** — the first time you connect to Capture One,
@@ -81,16 +92,49 @@ Photos you drag in directly never trigger a prompt.
 
 ## Using the app
 
-1. **Add photos** — drag image files onto the tray, or click it to browse.
-   JPEG, PNG, HEIC and WebP are supported. (sRGB color space)
-2. **Choose a layout** — Fill or Freeform, from the tools pane.
-3. **Arrange** — in Freeform, drag to move and corner-drag to resize.
+1. **Add photos** — drag image files onto the tray (or the Dock icon), or
+   click it to browse. JPEG, PNG, HEIC, WebP, TIFF, PSD and camera RAW files
+   are supported.
+2. **Choose a layout** — Justified, Gallery or Freeform, from the tools pane.
+3. **Arrange** — in Justified and Gallery, drag a photo to a new spot and the
+   others reflow around it (Image Order switches to **Manual**; dragging near
+   the top or bottom scrolls). In Freeform, drag to move and corner-drag to
+   resize.
 4. **Present** — **View › Slideshow** (**⌥F**) shows the board full screen;
    **← →** change pages, **Esc** exits.
-5. **Export** — *Export PDF* renders every page to one file.
+5. **Export** — *Export PDF* (or **File › Export PDF…**, ⇧⌘E) renders every
+   page to one file, in the background with a progress readout.
+6. **Save** — **File › Save** (⌘S) to come back to the board later.
 
 Press **Delete** / **Backspace** to remove the selected photo (in the tray, a
-slot, or a freeform placement) — unless a text field is focused.
+slot, or a freeform placement) — unless a text field is focused. Changed your
+mind? **⌘Z** brings it back.
+
+## Saved boards
+
+A board saves as a single `.moodboard` file (a package Finder shows as one
+document) holding the layout, every setting, titles, and cover/closing pages.
+
+- **Your photos are linked, not copied.** Originals can be large RAW files, so
+  the board remembers where each one lives. It follows a photo that's renamed
+  or moved on the same drive, and finds photos that moved *together with* the
+  board. If a photo can't be found when you open the board, you're told which
+  ones and the rest of the board opens normally.
+- **Capture One renders are copied in.** They live in the app's render cache,
+  which you can clear, so saving copies them into the board file itself.
+- Opening a board, starting a **New Board** (⌘N), or quitting with unsaved
+  changes asks whether to save first.
+
+## Keyboard shortcuts
+
+| | |
+|---|---|
+| New Board / Open / Save / Save As | ⌘N / ⌘O / ⌘S / ⇧⌘S |
+| Undo / Redo | ⌘Z / ⇧⌘Z |
+| Export PDF | ⇧⌘E |
+| Cover and Closing Pages | ⇧⌘T |
+| Slideshow | ⌥F |
+| Remove selected photo | Delete |
 
 ## How the Capture One integration works
 
@@ -135,12 +179,13 @@ currently on a board are always kept.
   - *Render Format* — fixed at JPEG QuickProof (nothing to configure).
   - *Render Cache* — on-disk size and a one-click clear.
   - *Advanced — recipe script* — for those who know AppleScript: override the
-    recipe script that drives Capture One. Placeholders `{{RECIPE_NAME}}` and
-    `{{HOT_FOLDER}}` are filled in automatically. **Reset to Default** restores
+    recipe script that drives Capture One. Placeholders `{{C1_APP_ID}}`,
+    `{{RECIPE_NAME}}` and `{{HOT_FOLDER}}` are filled in automatically. **Reset to Default** restores
     the shipped script if a custom one stops renders from arriving.
 - **License** — trial status, license-key activation, and deactivation.
 - **Guide** — a plain-language overview of every feature.
-- **About** — app icon, version, a *Check for Updates* button, and credits.
+- **About** — app icon, version, a *Check for Updates* button, the automatic
+  daily update check toggle, and credits.
 
 ## Licensing
 
@@ -158,7 +203,8 @@ Mood Board Studio Pro is **try-before-you-buy**:
   machine activations; use **Deactivate on This Mac** to free a seat before
   moving to another computer.
 - **Offline** — once activated, the license keeps working without an internet
-  connection. The app re-checks with the licensing server on launch and only
+  connection. The license is stored in your login Keychain. The app re-checks
+  with the licensing server on launch and only
   ever revokes a license if the server explicitly reports it as refunded,
   expired, or disabled — never on a failed network request.
 
@@ -172,5 +218,6 @@ stops working.
 
 ## Notes
 
-- Closing the main window quits the app (and closes an open Settings window).
+- Closing the main window quits the app (and closes an open Settings window),
+  after offering to save any unsaved changes.
 - A one-time welcome appears on first launch, pointing at the in-app Guide.
